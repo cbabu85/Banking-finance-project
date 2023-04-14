@@ -13,7 +13,7 @@ pipeline {
     stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
-        git branch: 'main', url: 'https://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@github.com/devopscbabu/Banking-Finance-Project.git''
+        git branch: 'main', url: 'https://github.com/devopscbabu/Banking-Finance-Project.git'
             }
     }
     
