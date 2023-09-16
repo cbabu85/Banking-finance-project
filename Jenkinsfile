@@ -48,15 +48,15 @@ pipeline {
         sh 'docker push cbabu85/bankingfinance:3.0'
             }
     }
-    /*    stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
+        stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
             steps {
                 dir('my-serverfiles'){
-                sh 'sudo chmod 600 keypairpem.pem'
+                sh 'sudo chmod 600 BabucKeypair.pem'
                 sh 'terraform init'
                 sh 'terraform validate'
                 sh 'terraform apply --auto-approve'
                 }
             }
-        }*/
+        }
      }
 }
