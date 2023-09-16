@@ -8,15 +8,8 @@ pipeline {
   environment {
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY') 
-    
+  }
   stages {
-/*    stage('test AWS Credentails') {
-      steps {
-        withAWS(credentials: 'AWS Credentials' , region: 'ap-south-1') {
-          sh 'echo "Login Success"'
-        }
-      }
-    } */
     stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
@@ -49,7 +42,7 @@ pipeline {
             }
         }
     }
-
+  
     stage('Push Image to DockerHub') {
       steps {
         sh 'docker push cbabu85/bankingfinance:3.0'
