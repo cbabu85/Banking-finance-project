@@ -5,17 +5,13 @@ pipeline {
     maven 'M2_HOME'
     
     }
-/*  environment {
+  environment {
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY') 
-  } */
+  } 
   
   stages {
-    stage('Aws-Login')
-    withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
-    }
-  }
-    stage('CheckOut') {
+   stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
         git branch: 'main', url: 'https://github.com/cbabu85/Banking-finance-project.git'
