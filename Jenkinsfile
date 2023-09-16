@@ -26,7 +26,7 @@ pipeline {
     
     stage('Publish Reports using HTML') {
       steps {
-      publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/Insure-Project/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+      publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/Banking-Project/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
             }
     }
     
@@ -48,7 +48,7 @@ pipeline {
         sh 'docker push cbabu85/bankingfinance:3.0'
             }
     }
-        stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
+    /*    stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
             steps {
                 dir('my-serverfiles'){
                 sh 'sudo chmod 600 keypairpem.pem'
@@ -57,6 +57,6 @@ pipeline {
                 sh 'terraform apply --auto-approve'
                 }
             }
-        }
+        }*/
      }
 }
