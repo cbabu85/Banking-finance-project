@@ -16,6 +16,7 @@ pipeline {
           sh 'echo "Login Success"'
         }
       }
+    }
     stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
