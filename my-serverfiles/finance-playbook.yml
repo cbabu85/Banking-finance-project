@@ -1,6 +1,6 @@
 - name : Configure Docker on test-server Instances
   hosts : all
-  become: true
+  become: ec2-user
   connection : ssh
   tasks : 
   - name: Updating yum
