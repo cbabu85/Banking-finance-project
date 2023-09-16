@@ -5,18 +5,18 @@ pipeline {
     maven 'M2_HOME'
     
     }
-/*  environment {
+  environment {
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY') 
-    }*/
+    
   stages {
-    stage('test AWS Credentails') {
+/*    stage('test AWS Credentails') {
       steps {
         withAWS(credentials: 'AWS Credentials' , region: 'ap-south-1') {
           sh 'echo "Login Success"'
         }
       }
-    }
+    } */
     stage('CheckOut') {
       steps {
         echo 'Checkout the source code from GitHub'
