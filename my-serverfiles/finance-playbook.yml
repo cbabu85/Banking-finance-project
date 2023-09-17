@@ -1,6 +1,6 @@
 - name : Configure Docker on test-server Instances
   hosts : all
-  become: ubuntu
+  become: true
   connection : ssh
   tasks : 
   - name: Updating yum
