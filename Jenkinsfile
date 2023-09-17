@@ -31,7 +31,7 @@ pipeline {
             }
     }
     
-    stage('Docker Image Creation') {
+/*    stage('Docker Image Creation') {
       steps {
         sh 'docker build -t cbabu85/bankingfinance:3.0 .'
             }
@@ -42,13 +42,13 @@ pipeline {
         sh "docker login -u ${docker_login} -p ${docker_password}"
             }
         }
-    }
+    } 
   
     stage('Push Image to DockerHub') {
       steps {
         sh 'docker push cbabu85/bankingfinance:3.0'
             }
-    }
+    } */
         stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
             steps {
                 dir('my-serverfiles'){
