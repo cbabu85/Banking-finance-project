@@ -18,7 +18,7 @@ pipeline {
             }
     }
     
-    stage('Package the Application') {
+/*    stage('Package the Application') {
       steps {
         echo " Packaing the Application"
         sh 'mvn clean package'
@@ -48,7 +48,7 @@ pipeline {
       steps {
         sh 'docker push cbabu85/bankingfinance:3.0'
             }
-    } 
+    } */
         stage ('Configure Test-server with Terraform, Ansible and then Deploying'){
             steps {
                 dir('my-serverfiles'){
